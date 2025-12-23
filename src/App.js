@@ -16,7 +16,6 @@ function App() {
     }
   }, [messages]);
 
-  // Ask question
   const askQuestion = async () => {
     if (!questions.trim()) return;
 
@@ -166,7 +165,7 @@ function App() {
         </div>
 
         {/* Input */}
-        <div className="bg-zinc-700 mb-12 sm:mb-14 text-white mx-auto rounded-full border-2 border-zinc-700 flex items-center px-2 gap-2 lg:w-[40rem] min-h-[3rem] sm:min-h-[2.5rem]">
+        <div className="bg-zinc-700 mb-12 sm:mb-14 text-white mx-auto rounded-full border-2 border-zinc-500 flex items-center px-2 gap-2 lg:w-[40rem] min-h-[3rem] sm:min-h-[2.5rem]">
   {/* File input */}
   <input
     type="file"
@@ -177,7 +176,7 @@ function App() {
   />
   <label
     htmlFor="fileInput"
-    className="cursor-pointer p-2 bg-gray-600 rounded-full flex items-center justify-center"
+    className="cursor-pointer p-2  rounded-full flex items-center justify-center"
   >
     <Plus size={20} />
   </label>
@@ -195,7 +194,7 @@ function App() {
   {/* Button */}
   <button
     onClick={askQuestion}
-    className="px-4 py-2 text-lg rounded-full bg-gray-600 hover:bg-gray-500 transition"
+    className="px-4 py-2 text-lg rounded-full  hover:bg-gray-500 transition"
   >
     Ask
   </button>
