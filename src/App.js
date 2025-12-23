@@ -166,29 +166,41 @@ function App() {
         </div>
 
         {/* Input */}
-        <div className="bg-zinc-700 mb-12 h-12 text-white mx-auto rounded-full border-2 border-zinc-700 flex items-center px-2 gap-2 lg:w-[40rem]">
-          <input
-            type="file"
-            accept="image/*"
-            id="fileInput"
-            onChange={handleImage}
-            className="hidden"
-          />
-          <label htmlFor="fileInput" className="cursor-pointer p-2 bg-gray-600 rounded-full">
-            <Plus size={20} />
-          </label>
+        <div className="bg-zinc-700 mb-12 sm:mb-14 text-white mx-auto rounded-full border-2 border-zinc-700 flex items-center px-2 gap-2 lg:w-[40rem] min-h-[3rem] sm:min-h-[2.5rem]">
+  {/* File input */}
+  <input
+    type="file"
+    accept="image/*"
+    id="fileInput"
+    onChange={handleImage}
+    className="hidden"
+  />
+  <label
+    htmlFor="fileInput"
+    className="cursor-pointer p-2 bg-gray-600 rounded-full flex items-center justify-center"
+  >
+    <Plus size={20} />
+  </label>
 
-          <input
-            type="text"
-            value={questions}
-            onChange={(e) => setQuestions(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && askQuestion()}
-            placeholder="Ask me anything"
-            className="bg-zinc-700 w-full outline-none px-2 text-md md:text-base"
-          />
+  {/* Text input */}
+  <input
+    type="text"
+    value={questions}
+    onChange={(e) => setQuestions(e.target.value)}
+    onKeyDown={(e) => e.key === "Enter" && askQuestion()}
+    placeholder="Ask me anything"
+    className="flex-1 bg-zinc-700 outline-none px-2 py-2 text-md md:text-base rounded-full"
+  />
 
-          <button onClick={askQuestion} className="px-8 text-lg">Ask</button>
-        </div>
+  {/* Button */}
+  <button
+    onClick={askQuestion}
+    className="px-4 py-2 text-lg rounded-full bg-gray-600 hover:bg-gray-500 transition"
+  >
+    Ask
+  </button>
+</div>
+
       </div>
     </div>
   );
